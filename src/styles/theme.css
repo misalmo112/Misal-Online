@@ -1,0 +1,180 @@
+/* Cyberpunk NOC — theme variables */
+:root {
+  /* Background */
+  --bg-deep: #0a0e17;
+  --bg-navy: #0d1321;
+  --bg-card: rgba(13, 19, 33, 0.85);
+  --bg-panel: rgba(10, 14, 23, 0.97);
+
+  /* Neon & accents */
+  --neon-cyan: #00f5ff;
+  --neon-cyan-dim: rgba(0, 245, 255, 0.5);
+  --accent-magenta: #ff00aa;
+  --accent-magenta-dim: rgba(255, 0, 170, 0.5);
+  --accent-amber: #ffb020;
+  --accent-amber-dim: rgba(255, 176, 32, 0.5);
+
+  /* Text */
+  --text-primary: #e8ecf4;
+  --text-secondary: #a0b0c8;
+  --text-muted: #687090;
+
+  /* UI */
+  --grid-opacity: 0.06;
+  --border-subtle: rgba(0, 245, 255, 0.15);
+  --glow-cyan: 0 0 12px rgba(0, 245, 255, 0.4);
+  --glow-magenta: 0 0 12px rgba(255, 0, 170, 0.4);
+
+  /* Layout */
+  --hero-collapsed-height: 140px;
+  --inspector-width: 360px;
+  --section-max-width: 1100px;
+
+  /* Typography — larger notes/content */
+  --text-body: 1.125rem;
+  --text-body-lg: 1.25rem;
+  --text-lead: 1.35rem;
+  --text-section-title: 2rem;
+  --text-card-title: 1.35rem;
+  --text-chip: 0.95rem;
+  --line-height-body: 1.65;
+}
+
+/* Reset & base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: var(--text-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: var(--line-height-body);
+  overflow-x: hidden;
+}
+
+/* Subtle grid background */
+.app-grid-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(0, 245, 255, var(--grid-opacity)) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, var(--grid-opacity)) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.8;
+}
+
+/* Very subtle scanline sweep (every ~12s) */
+.scanline-sweep {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 98%,
+    rgba(0, 245, 255, 0.03) 99%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: scanline 12s linear infinite;
+}
+
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 200%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanline-sweep {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--neon-cyan);
+  color: var(--bg-deep);
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 1000;
+  border-radius: 4px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--accent-magenta);
+  outline-offset: 2px;
+}
+
+/* Section common */
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 1.75rem;
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: var(--text-section-title);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+  border-left: 4px solid var(--neon-cyan);
+  padding-left: 1rem;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+}
+
+/* Hero topology */
+.hero-topology {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topology-wrapper {
+  display: block;
+}
+
+.topology-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.node-label {
+  pointer-events: none;
+}
+
+/* Reduced motion: disable decorative animations */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .app-grid-bg {
+    opacity: 0.5;
+  }
+}
