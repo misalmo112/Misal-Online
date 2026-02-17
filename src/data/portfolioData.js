@@ -34,7 +34,6 @@ export const portfolioData = {
     { id: 'network-infrastructure', label: 'Network & Infrastructure', type: 'domain', position: { x: 22, y: 28 }, contentKey: 'network-infrastructure' },
     { id: 'software-systems', label: 'Software Systems', type: 'domain', position: { x: 78, y: 25 }, contentKey: 'software-systems' },
     { id: 'project-subnets', label: 'Project Subnets', type: 'domain', position: { x: 50, y: 18 }, contentKey: 'project-subnets' },
-    { id: 'professional-experience', label: 'Professional Experience', type: 'domain', position: { x: 18, y: 72 }, contentKey: 'professional-experience' },
     { id: 'certifications', label: 'Certifications', type: 'domain', position: { x: 82, y: 68 }, contentKey: 'certifications' },
     { id: 'field-ops', label: 'Field Ops', type: 'domain', position: { x: 35, y: 85 }, contentKey: 'field-ops' },
     { id: 'achievements', label: 'Achievements', type: 'domain', position: { x: 68, y: 82 }, contentKey: 'achievements' },
@@ -50,7 +49,6 @@ export const portfolioData = {
     ['core', 'network-infrastructure'],
     ['core', 'software-systems'],
     ['core', 'project-subnets'],
-    ['core', 'professional-experience'],
     ['core', 'certifications'],
     ['core', 'field-ops'],
     ['core', 'achievements'],
@@ -104,52 +102,6 @@ export const portfolioData = {
       tags: [],
       links: [],
       isSubnetList: true,
-    },
-    'professional-experience': {
-      title: 'Professional Experience',
-      summary: 'Internships at GBM, ADNOC, and Huawei.',
-      bullets: [],
-      tags: ['GBM', 'ADNOC', 'Huawei'],
-      links: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/misal-muhammed-kunhi-626162250/' }],
-      jobs: [
-        {
-          company: 'GBM (Gulf Business Machines)',
-          location: 'Abu Dhabi',
-          role: 'Network and Infrastructure Engineer Intern',
-          period: 'September 2025',
-          bullets: [
-            'Supported large-scale network modernization project (staging/config/deployment of Cisco switching infrastructure).',
-            'Upgraded/standardized network devices for performance/resilience/scalability.',
-            'Designed/documented topologies: VLAN segmentation, L2/L3 configs, redundancy, access policies.',
-            'Assisted with Cisco Cloud and Meraki solutions for monitoring/config/automation.',
-            'Staged/configured wireless APs for secure connectivity/integration.',
-            'Collaborated in testing/validation/cutover to ensure minimal downtime.',
-            'Prepared technical documentation/config records for support/knowledge transfer.',
-          ],
-        },
-        {
-          company: 'ADNOC HQ',
-          location: 'Abu Dhabi',
-          role: 'Digital Commercial and Financial Solutions Intern',
-          period: 'June 2024 - September 2024',
-          bullets: [
-            'Digitized workflows and automated repetitive tasks.',
-            'Maintained financial records; proposed digital solutions for order management/inventory control.',
-            'Conducted financial analysis and market research for business insights.',
-          ],
-        },
-        {
-          company: 'Huawei',
-          location: 'Dubai',
-          role: 'Network Engineer Intern',
-          period: 'June 2023 - August 2023',
-          bullets: [
-            'Assisted configuring/installing/maintaining network hardware/software.',
-            'Monitored security; implemented firewalls and IDS.',
-            'Documented network configs; participated in capacity planning.',
-          ],
-        },
-      ],
     },
     certifications: {
       title: 'Certifications',
@@ -241,13 +193,6 @@ export const portfolioData = {
     { category: 'Security', items: ['Firewalls', 'IDS/IPS', 'Access Policies', 'Secure Connectivity'] },
     { category: 'Software Systems', items: ['React', 'Node.js', 'REST APIs', 'Automation', 'Documentation'] },
     { category: 'Databases/Cloud', items: ['Cisco Cloud', 'Monitoring', 'Config Management'] },
-  ],
-
-  // Experience section (timeline)
-  experience: [
-    { company: 'GBM (Gulf Business Machines)', location: 'Abu Dhabi', role: 'Network and Infrastructure Engineer Intern', period: 'September 2025', bullets: ['Cisco switching infrastructure', 'VLAN/L2/L3 design', 'Meraki & Cisco Cloud', 'Wireless APs', 'Documentation & cutover'] },
-    { company: 'ADNOC HQ', location: 'Abu Dhabi', role: 'Digital Commercial and Financial Solutions Intern', period: 'June 2024 - September 2024', bullets: ['Digitized workflows', 'Financial records & digital solutions', 'Market research'] },
-    { company: 'Huawei', location: 'Dubai', role: 'Network Engineer Intern', period: 'June 2023 - August 2023', bullets: ['Network hardware/software', 'Security, firewalls, IDS', 'Documentation & capacity planning'] },
   ],
 
   // Certifications section

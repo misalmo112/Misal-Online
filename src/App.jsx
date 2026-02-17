@@ -5,7 +5,6 @@ import { portfolioData } from './data/portfolioData.js'
 
 const Projects = lazy(() => import('./sections/Projects.jsx'))
 const Skills = lazy(() => import('./sections/Skills.jsx'))
-const Experience = lazy(() => import('./sections/Experience.jsx'))
 const Certifications = lazy(() => import('./sections/Certifications.jsx'))
 const FieldOps = lazy(() => import('./sections/FieldOps.jsx'))
 const Achievements = lazy(() => import('./sections/Achievements.jsx'))
@@ -36,9 +35,6 @@ export default function App() {
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <Skills data={portfolioData} />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Experience data={portfolioData} />
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <Certifications data={portfolioData} />
