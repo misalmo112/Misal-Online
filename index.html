@@ -36,7 +36,7 @@ body {
   color: var(--text);
   font-family: var(--fB);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* grain overlay */
@@ -87,7 +87,7 @@ body::after {
 /* ── HERO ────────────────────────────────────── */
 #hero {
   position:relative;min-height:100vh;
-  display:flex;align-items:center;overflow:hidden;
+  display:flex;align-items:center;
 }
 #topo-canvas {
   position:absolute;inset:0;width:100%;height:100%;
