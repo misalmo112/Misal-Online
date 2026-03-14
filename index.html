@@ -223,6 +223,10 @@ hr.div {
 /* ── REVEAL ───────────────────────────────────── */
 .rv { opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease; }
 .rv.on { opacity:1;transform:none; }
+/* Fallback: if JS fails to add .on, still show content */
+@media (prefers-reduced-motion: no-preference) {}
+body.js-ready .rv { opacity:0; }
+body:not(.js-ready) .rv { opacity:1;transform:none; }
 .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}
 .rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
 
@@ -784,18 +788,27 @@ footer p {
 </div><!-- /page-wrap -->
 
 <script>
+/* ── JS READY ── */
+document.body.classList.add('js-ready');
+
 /* ── NAV SCROLL ── */
 const nav = document.getElementById('nav');
-addEventListener('scroll', () => {
-  nav.classList.toggle('stuck', scrollY > 60);
-});
+const scrollEl = document.documentElement;
+function onScroll() {
+  nav.classList.toggle('stuck', scrollEl.scrollTop > 60 || window.scrollY > 60);
+}
+document.addEventListener('scroll', onScroll, true);
 
 /* ── INTERSECTION OBSERVER ── */
 document.querySelectorAll('.rv').forEach(el => {
   new IntersectionObserver(([e]) => {
     if (e.isIntersecting) e.target.classList.add('on');
-  }, { threshold: 0.1 }).observe(el);
+  }, { threshold: 0.1, root: null }).observe(el);
 });
+// Fallback: reveal all after 300ms in case observer doesn't fire
+setTimeout(() => {
+  document.querySelectorAll('.rv').forEach(el => el.classList.add('on'));
+}, 300);
 
 /* ── TYPEWRITER ── */
 const phrases = [
