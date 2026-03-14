@@ -31,13 +31,15 @@
 
 html { scroll-behavior: smooth; }
 
-html { overflow-x: hidden; }
-
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--fB);
   line-height: 1.6;
+}
+
+#page-wrap {
+  overflow-x: hidden;
 }
 
 /* grain overlay */
@@ -443,6 +445,7 @@ footer p {
 </style>
 </head>
 <body>
+<div id="page-wrap">
 
 <!-- NAV -->
 <nav id="nav">
@@ -770,6 +773,8 @@ footer p {
   <p>© 2025 Misal Muhammed Kunhi</p>
   <p>Network &amp; Infrastructure Engineer — misalonline.com</p>
 </footer>
+
+</div><!-- /page-wrap -->
 
 <script>
 /* ── NAV SCROLL ── */
