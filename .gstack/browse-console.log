@@ -38,3 +38,73 @@
 [2026-04-27T15:49:32.094Z] [error] Error: <circle> attribute r: Expected length, "undefined".
 [2026-04-27T15:49:55.164Z] [error] Error: <circle> attribute r: Expected length, "undefined".
 [2026-04-27T15:49:55.164Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T16:14:54.162Z] [debug] [vite] connecting...
+[2026-04-27T16:14:54.229Z] [debug] [vite] connected.
+[2026-04-27T16:14:54.303Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-27T16:14:54.344Z] [error] Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s offsetPath offsetpath 
+    at circle
+    at MotionComponent (http://localhost:5174/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at g
+    at Link (http://localhost:5174/src/components/Topology/Link.jsx:19:32)
+    at g
+    at svg
+    at TopologyCanvas (http://localhost:5174/src/components/Topology/TopologyCanvas.jsx:22:3)
+    at div
+    at MotionComponent (http://localhost:5174/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at section
+    at HeroTopology (http://localhost:5174/src/components/Topology/HeroTopology.jsx:25:3)
+    at main
+    at App (http://localhost:5174/src/App.jsx:44:47)
+[2026-04-27T16:14:54.396Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T16:14:54.396Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T16:16:23.539Z] [debug] [vite] connecting...
+[2026-04-27T16:16:23.573Z] [debug] [vite] connected.
+[2026-04-27T16:16:23.643Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-27T16:16:23.682Z] [error] Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s offsetPath offsetpath 
+    at circle
+    at MotionComponent (http://localhost:5174/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at g
+    at Link (http://localhost:5174/src/components/Topology/Link.jsx:19:32)
+    at g
+    at svg
+    at TopologyCanvas (http://localhost:5174/src/components/Topology/TopologyCanvas.jsx:22:3)
+    at div
+    at MotionComponent (http://localhost:5174/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at section
+    at HeroTopology (http://localhost:5174/src/components/Topology/HeroTopology.jsx:25:3)
+    at main
+    at App (http://localhost:5174/src/App.jsx:44:47)
+[2026-04-27T16:16:23.725Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T16:16:23.725Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T16:25:22.115Z] [debug] [vite] hot updated: /src/styles/theme.css
+[2026-04-27T16:26:01.823Z] [debug] [vite] hot updated: /src/App.jsx
+[2026-04-27T16:26:01.823Z] [debug] [vite] hot updated: /src/components/Topology/HeroTopology.jsx
+[2026-04-27T16:26:01.867Z] [error] The above error occurred in the <TopologyCanvas> component:
+
+    at TopologyCanvas (http://localhost:5174/src/components/Topology/TopologyCanvas.jsx:22:3)
+    at div
+    at MotionComponent (http://localhost:5174/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at section
+    at HeroTopology (http://localhost:5174/src/components/Topology/HeroTopology.jsx?t=1777307161802:25:3)
+    at main
+    at App (http://localhost:5174/src/App.jsx?t=1777307161802:44:47)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+[2026-04-27T16:27:06.594Z] [error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+[2026-04-27T16:27:06.597Z] [error] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2026-04-27T16:27:06.597Z] [debug] [vite] hot updated: /src/App.jsx
+[2026-04-27T16:31:42.759Z] [debug] [vite] connecting...
+[2026-04-27T16:31:42.799Z] [error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+[2026-04-27T16:31:42.799Z] [debug] [vite] connected.
+[2026-04-27T16:32:02.843Z] [debug] [vite] connecting...
+[2026-04-27T16:32:02.856Z] [error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+[2026-04-27T16:32:02.857Z] [debug] [vite] connected.
+[2026-04-27T16:32:17.076Z] [debug] [vite] connecting...
+[2026-04-27T16:32:17.101Z] [debug] [vite] connected.
+[2026-04-27T16:32:17.135Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-27T16:32:47.739Z] [debug] [vite] hot updated: /src/components/Topology/Topology.jsx
+[2026-04-27T16:34:19.455Z] [debug] [vite] hot updated: /src/App.jsx
+[2026-04-27T16:35:51.495Z] [debug] [vite] hot updated: /src/App.jsx
+[2026-04-27T16:35:55.569Z] [debug] [vite] hot updated: /src/App.jsx
+[2026-04-27T16:35:59.215Z] [debug] [vite] hot updated: /src/App.jsx

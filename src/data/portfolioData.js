@@ -1,310 +1,117 @@
-/**
- * Single source of truth for the Cyberpunk NOC portfolio.
- * All UI content is driven from this file.
- */
-
-export const portfolioData = {
-  meta: {
-    name: 'Misal Muhammed Kunhi',
-    title: 'Network & Infrastructure Engineer',
-    headline: 'Network & Infrastructure Engineer',
-    location: 'Abu Dhabi, UAE',
-    visa: 'Golden Visa Holder',
-  },
-
-  contact: {
-    email: 'misalmo@outlook.com',
-    links: [
-      { label: 'Email', href: 'mailto:misalmo@outlook.com', icon: 'email' },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/misal-muhammed-kunhi-626162250/', icon: 'linkedin' },
-      { label: 'GitHub', href: 'https://github.com/misalmo112', icon: 'github' },
-      { label: 'Strava', href: 'https://strava.app.link/Ked0o4UMP0b', icon: 'strava' },
-      { label: 'Instagram', href: 'https://www.instagram.com/misal.mo', icon: 'instagram' },
-    ],
-  },
-
-  education: [
-    { school: 'Rochester Institute of Technology, Dubai', degree: 'Bachelor of Computing and Information Technology', graduated: 'May 2025' },
-    { school: 'Abu Dhabi Indian School', degree: 'High School Diploma', graduated: 'March 2021' },
-  ],
-
-  // Topology: nodes with organic positions (x, y in 0–100 viewBox)
-  topologyNodes: [
-    { id: 'core', label: 'CORE', type: 'core', position: { x: 50, y: 50 }, contentKey: 'core' },
-    { id: 'network-infrastructure', label: 'Network & Infrastructure', type: 'domain', position: { x: 22, y: 28 }, contentKey: 'network-infrastructure' },
-    { id: 'software-systems', label: 'Software Systems', type: 'domain', position: { x: 78, y: 25 }, contentKey: 'software-systems' },
-    { id: 'project-subnets', label: 'Project Subnets', type: 'domain', position: { x: 50, y: 18 }, contentKey: 'project-subnets' },
-    { id: 'certifications', label: 'Certifications', type: 'domain', position: { x: 82, y: 68 }, contentKey: 'certifications' },
-    { id: 'field-ops', label: 'Field Ops', type: 'domain', position: { x: 35, y: 85 }, contentKey: 'field-ops' },
-    { id: 'achievements', label: 'Achievements', type: 'domain', position: { x: 68, y: 82 }, contentKey: 'achievements' },
-    // Cluster nodes under Project Subnets
-    { id: 'subnet-1', label: '10.0.0.0/24', type: 'cluster', position: { x: 38, y: 10 }, contentKey: 'project-academic', clusterId: 'project-subnets' },
-    { id: 'subnet-2', label: '192.168.1.0/24', type: 'cluster', position: { x: 52, y: 8 }, contentKey: 'project-family', clusterId: 'project-subnets' },
-    { id: 'subnet-3', label: '192.168.2.0/24', type: 'cluster', position: { x: 62, y: 12 }, contentKey: 'project-sports', clusterId: 'project-subnets' },
-    { id: 'subnet-4', label: '192.168.3.0/24', type: 'cluster', position: { x: 48, y: 14 }, contentKey: 'project-openclaw', clusterId: 'project-subnets' },
-  ],
-
-  // Links: [fromId, toId]
-  topologyLinks: [
-    ['core', 'network-infrastructure'],
-    ['core', 'software-systems'],
-    ['core', 'project-subnets'],
-    ['core', 'certifications'],
-    ['core', 'field-ops'],
-    ['core', 'achievements'],
-    ['project-subnets', 'subnet-1'],
-    ['project-subnets', 'subnet-2'],
-    ['project-subnets', 'subnet-3'],
-    ['project-subnets', 'subnet-4'],
-  ],
-
-  // Inspector content per node (contentKey)
-  nodeContent: {
-    core: {
-      title: 'EDGE-CORE-01',
-      summary: 'Primary routing node — Misal Muhammed Kunhi. Network & Infrastructure Engineer.',
-      bullets: [
-        'Hostname: MISAL.K',
-        'Status: OPERATIONAL',
-        'Location: Abu Dhabi, UAE',
-        'Visa: Golden Visa Holder',
-      ],
-      tags: ['NOC', 'Edge', 'Core'],
-      links: [],
-    },
-    'network-infrastructure': {
-      title: 'Network & Infrastructure',
-      summary: 'Networking, switching, routing, and infrastructure design.',
-      bullets: [
-        'Cisco switching & routing',
-        'VLAN segmentation, L2/L3 design',
-        'Redundancy and access policies',
-        'Meraki & Cisco Cloud',
-      ],
-      tags: ['Cisco', 'Meraki', 'VLAN', 'L2/L3'],
-      links: [],
-    },
-    'software-systems': {
-      title: 'Software Systems',
-      summary: 'Software development and system integration.',
-      bullets: [
-        'Full-stack and automation',
-        'APIs and integrations',
-        'Documentation and tooling',
-      ],
-      tags: ['React', 'Node', 'APIs'],
-      links: [{ label: 'GitHub', href: 'https://github.com/misalmo112' }],
-    },
-    'project-subnets': {
-      title: 'Project Subnets',
-      summary: 'Select a subnet below to inspect project details.',
-      bullets: [],
-      tags: [],
-      links: [],
-      isSubnetList: true,
-    },
-    certifications: {
-      title: 'Certifications',
-      summary: 'Industry and vendor certifications.',
-      bullets: ['CCNA', 'Cisco AI Technical Practitioner', 'ITIL 4 Foundation', 'CCIE Training'],
-      tags: ['CCNA', 'ITIL 4', 'CCIE Training'],
-      links: [],
-    },
-    'field-ops': {
-      title: 'Field Ops',
-      summary: 'Long distance running, hiking, photography, and more.',
-      bullets: [
-        'Long distance running (Strava)',
-        'Hiking/camping',
-        'Photography',
-        'Going out with friends',
-        'Volleyball',
-      ],
-      tags: ['Strava', 'Running', 'Photography'],
-      links: [
-        { label: 'Strava', href: 'https://strava.app.link/Ked0o4UMP0b' },
-        { label: 'Instagram', href: 'https://www.instagram.com/misal.mo' },
-      ],
-    },
-    achievements: {
-      title: 'Achievements',
-      summary: 'Academic and personal milestones.',
-      bullets: [
-        '4x Dean\'s List Certificate for academic excellence',
-        'Selected for RIT Student Abroad Program in New York',
-        'Golden Visa Holder',
-      ],
-      tags: ['Dean\'s List', 'RIT Abroad', 'Golden Visa'],
-      links: [],
-    },
-    'project-academic': {
-      title: 'Academic Advising Subsystem',
-      subnet: '10.0.0.0/24',
-      summary: 'Capstone: automated academic advisor subsystem at university.',
-      bullets: ['University capstone project', 'Automated advising workflows'],
-      tags: ['Capstone', 'Automation'],
-      links: [],
-    },
-    'project-family': {
-      title: 'Family App',
-      subnet: '192.168.1.0/24',
-      summary: 'Family-oriented application project.',
-      bullets: [],
-      tags: ['App'],
-      links: [],
-    },
-    'project-sports': {
-      title: 'Sports Management App',
-      subnet: '192.168.2.0/24',
-      summary: 'Sports management application.',
-      bullets: [],
-      tags: ['App', 'Sports'],
-      links: [],
-    },
-    'project-openclaw': {
-      title: 'OpenClaw AI Assistant',
-      subnet: '192.168.3.0/24',
-      summary: 'AI assistant project.',
-      bullets: [],
-      tags: ['AI', 'Assistant'],
-      links: [],
-    },
-  },
-
-  // Project subnets for Inspector (tiles)
-  projectSubnets: [
-    { subnet: '10.0.0.0/24', name: 'Academic Advising Subsystem', contentKey: 'project-academic' },
-    { subnet: '192.168.1.0/24', name: 'Family App', contentKey: 'project-family' },
-    { subnet: '192.168.2.0/24', name: 'Sports Management App', contentKey: 'project-sports' },
-    { subnet: '192.168.3.0/24', name: 'OpenClaw AI Assistant', contentKey: 'project-openclaw' },
-  ],
-
-  // Experience timeline
-  experience: [
-    {
-      role: 'Network Engineer',
-      company: 'Freelance / Self-Directed',
-      location: 'Abu Dhabi, UAE',
-      period: '2023 – Present',
-      bullets: [
-        'Designed and deployed enterprise-grade switching & routing architectures using Cisco IOS/NX-OS',
-        'Implemented VLAN segmentation, L2/L3 redundancy, and access policies for multi-site environments',
-        'Managed Cisco Meraki cloud-managed networks and wireless deployments',
-        'Produced network documentation, topology diagrams, and runbooks',
-      ],
-    },
-    {
-      role: 'Full-Stack Developer & Founder',
-      company: 'SaaS — Sports Management Platform',
-      location: 'Remote',
-      period: '2023 – Present',
-      bullets: [
-        'Built a SaaS sports management application from scratch — architecture, frontend, backend, database',
-        'Implemented multi-tenant auth, real-time scheduling, and league management features',
-        'Designed REST API, deployed on cloud infrastructure with CI/CD pipeline',
-      ],
-    },
-    {
-      role: 'Student — B.S. Computing & Information Technology',
-      company: 'Rochester Institute of Technology, Dubai',
-      location: 'Dubai, UAE',
-      period: '2021 – May 2025',
-      bullets: [
-        '4× Dean\'s List Certificate for academic excellence',
-        'Selected for RIT Student Abroad Program, Rochester New York campus',
-        'Capstone: Academic Advising Subsystem — automated advising workflows',
-      ],
-    },
-  ],
-
-  // Projects section (cards)
-  projects: [
-    {
-      id: 'sports',
-      name: 'Sports Management SaaS',
-      description: 'Multi-tenant SaaS platform for league and tournament management. Built solo from architecture to deployment.',
-      tags: ['React', 'Node.js', 'SaaS', 'Cloud'],
-      link: 'https://github.com/misalmo112',
-    },
-    {
-      id: 'openclaw',
-      name: 'OpenClaw AI Assistant',
-      description: 'AI-powered assistant integrating multiple LLM providers with tool use, memory, and a custom orchestration layer.',
-      tags: ['AI', 'LLM', 'Python'],
-      link: 'https://github.com/misalmo112',
-    },
-    {
-      id: 'academic',
-      name: 'Academic Advising Subsystem',
-      description: 'Capstone project at RIT Dubai — automated academic advising workflows to reduce advisor load.',
-      tags: ['Capstone', 'Automation', 'React'],
-      link: 'https://github.com/misalmo112',
-    },
-    {
-      id: 'portfolio',
-      name: 'This Portfolio',
-      description: 'Cyberpunk NOC-themed personal portfolio. Clickable topology network, animated sections, dark/light mode.',
-      tags: ['React', 'Framer Motion', 'Vite'],
-      link: 'https://github.com/misalmo112/Misal-Online',
-    },
-  ],
-
-  // Skills section (grouped with proficiency 0–100)
-  skills: [
-    {
-      category: 'Networking & Infrastructure',
-      items: [
-        { name: 'Cisco IOS/NX-OS', level: 90 },
-        { name: 'VLAN / L2/L3 Design', level: 88 },
-        { name: 'BGP / OSPF', level: 75 },
-        { name: 'Cisco Meraki', level: 82 },
-        { name: 'Wireless LAN', level: 78 },
-        { name: 'Network Documentation', level: 92 },
-      ],
-    },
-    {
-      category: 'Software & Cloud',
-      items: [
-        { name: 'React / TypeScript', level: 85 },
-        { name: 'Node.js / REST APIs', level: 83 },
-        { name: 'Python / Automation', level: 78 },
-        { name: 'Cloud Infrastructure', level: 72 },
-        { name: 'CI/CD Pipelines', level: 70 },
-      ],
-    },
-    {
-      category: 'Security & Operations',
-      items: [
-        { name: 'Firewalls / IDS/IPS', level: 80 },
-        { name: 'Access Policies / ACLs', level: 85 },
-        { name: 'ITIL Practices', level: 88 },
-        { name: 'Incident Management', level: 80 },
-      ],
-    },
-  ],
-
-  // Certifications section
-  certificationsList: [
-    { name: 'CCNA' },
-    { name: 'Cisco AI Technical Practitioner' },
-    { name: 'ITIL 4 Foundation' },
-    { name: 'CCIE Training' },
-  ],
-
-  // Achievements (can be its own section or in hero)
-  achievementsList: [
-    '4x Dean\'s List Certificate for academic excellence',
-    'Selected for RIT Student Abroad Program in New York',
-    'Golden Visa Holder',
-  ],
-
-  // Field Ops section
-  fieldOps: [
-    { name: 'Long distance running', link: 'https://strava.app.link/Ked0o4UMP0b', linkLabel: 'Strava' },
-    { name: 'Hiking/camping' },
-    { name: 'Photography' },
-    { name: 'Going out with friends' },
-    { name: 'Volleyball' },
-    { name: 'Instagram', link: 'https://www.instagram.com/misal.mo', linkLabel: 'misal.mo' },
-  ],
+export const META = {
+  name: 'Misal Muhammed Kunhi',
+  title: 'Network & Infrastructure Engineer',
+  tagline: 'Building reliable networks and scalable systems — from hardware to cloud.',
+  location: 'Abu Dhabi, UAE',
+  visa: 'UAE Golden Visa Holder',
+  email: 'mailto:misalmo@outlook.com',
+  github: 'https://github.com/misalmo112',
+  linkedin: 'https://www.linkedin.com/in/misal-muhammed-kunhi-626162250/',
 }
+
+export const NODES = [
+  { id:'core',  label:'CORE',     type:'core',   cx:50, cy:50 },
+  { id:'net',   label:'Network',  type:'domain', cx:20, cy:30 },
+  { id:'sw',    label:'Software', type:'domain', cx:78, cy:28 },
+  { id:'sec',   label:'Security', type:'domain', cx:22, cy:70 },
+  { id:'cloud', label:'Cloud',    type:'domain', cx:76, cy:70 },
+  { id:'proj',  label:'Projects', type:'domain', cx:50, cy:17 },
+  { id:'cert',  label:'Certs',    type:'domain', cx:50, cy:83 },
+  { id:'n1', label:'VLAN',    type:'leaf', cx:7,  cy:18 },
+  { id:'n2', label:'BGP',     type:'leaf', cx:5,  cy:40 },
+  { id:'n3', label:'Meraki',  type:'leaf', cx:13, cy:55 },
+  { id:'n4', label:'React',   type:'leaf', cx:91, cy:18 },
+  { id:'n5', label:'Node.js', type:'leaf', cx:93, cy:38 },
+  { id:'n6', label:'Firewall',type:'leaf', cx:8,  cy:80 },
+  { id:'n7', label:'IDS/IPS', type:'leaf', cx:26, cy:87 },
+  { id:'n8', label:'AWS',     type:'leaf', cx:88, cy:80 },
+  { id:'n9', label:'K8s',     type:'leaf', cx:88, cy:60 },
+  { id:'p1', label:'SaaS',    type:'leaf', cx:36, cy:7  },
+  { id:'p2', label:'AI',      type:'leaf', cx:64, cy:7  },
+  { id:'c1', label:'CCNA',    type:'leaf', cx:37, cy:93 },
+  { id:'c2', label:'ITIL4',   type:'leaf', cx:63, cy:93 },
+]
+
+export const LINKS = [
+  ['core','net'],['core','sw'],['core','sec'],['core','cloud'],['core','proj'],['core','cert'],
+  ['net','n1'],['net','n2'],['net','n3'],
+  ['sw','n4'],['sw','n5'],
+  ['sec','n6'],['sec','n7'],
+  ['cloud','n8'],['cloud','n9'],
+  ['proj','p1'],['proj','p2'],
+  ['cert','c1'],['cert','c2'],
+]
+
+export const PACKET_LINKS = [
+  { from:'core', to:'net',   dur:'2.8s' },
+  { from:'core', to:'sw',    dur:'3.4s' },
+  { from:'core', to:'cloud', dur:'4.1s' },
+  { from:'net',  to:'n1',    dur:'5s'   },
+  { from:'sw',   to:'n4',    dur:'6s'   },
+]
+
+export const NODE_INFO = {
+  core:  { title:'EDGE-CORE-01', summary:'Primary routing node — Misal Muhammed Kunhi, Network & Infrastructure Engineer based in Abu Dhabi, UAE.', bullets:['Hostname: MISAL.K','Status: OPERATIONAL','Location: Abu Dhabi, UAE','Visa: UAE Golden Visa Holder'], tags:['NOC','Core','Edge'], links:[] },
+  net:   { title:'Network & Infrastructure', summary:'Enterprise networking across switching, routing, and cloud management.', bullets:['Cisco IOS / NX-OS','VLAN segmentation, L2/L3 design','BGP, OSPF routing protocols','Meraki cloud management'], tags:['Cisco','VLAN','Meraki'], links:[] },
+  sw:    { title:'Software Systems', summary:'Full-stack development and SaaS architecture — built a complete SaaS from scratch.', bullets:['Built SaaS application from scratch','React, Node.js, REST API design','Cloud deployment and scaling'], tags:['React','Node.js','SaaS'], links:[{ label:'GitHub', href:'https://github.com/misalmo112' }] },
+  sec:   { title:'Security', summary:'Network security design, firewalls, and access control policies.', bullets:['Firewall configuration & management','IDS/IPS deployment','Secure access control policies','Zero-trust network design'], tags:['Firewall','IDS/IPS','ZeroTrust'], links:[] },
+  cloud: { title:'Cloud & Infrastructure', summary:'Cloud architecture — currently pursuing MSc in Cloud Computing.', bullets:['MSc Cloud Computing (in progress)','Cloud architecture design','Infrastructure automation','Cisco cloud management'], tags:['Cloud','AWS','Automation'], links:[] },
+  proj:  { title:'Project Subnets', summary:'Standalone software projects spanning SaaS, AI, and academic systems.', bullets:['Academic Advising Subsystem','Sports Management App','OpenClaw AI Assistant','Family Social App'], tags:['Open Source','GitHub'], links:[{ label:'GitHub', href:'https://github.com/misalmo112' }] },
+  cert:  { title:'Certifications', summary:'Active vendor and framework certifications.', bullets:['CCNA — Cisco','ITIL 4 Foundation — PeopleCert','Cisco AI Technical Practitioner','CCIE Enterprise (In Progress)'], tags:['CCNA','ITIL4','CCIE'], links:[] },
+}
+
+export const EXPERIENCE = [
+  { role:'Network & Infrastructure Engineer', org:'Abu Dhabi, UAE', period:'2024 — Present',
+    bullets:['Cisco IOS/NX-OS switching & routing across enterprise networks','VLAN segmentation, L2/L3 design, redundancy and failover','Meraki cloud management and wireless infrastructure deployment','Firewall config, IDS/IPS, access control policy enforcement'] },
+  { role:'SaaS Developer — Independent', org:'Remote', period:'2023 — 2024',
+    bullets:['Architected and built a full SaaS product from scratch','Full-stack: React, Node.js, REST API design, cloud deployment','End-to-end ownership: product vision, development, and scaling'] },
+]
+
+export const EDUCATION = [
+  { degree:'MSc Cloud Computing',                    school:'In Progress',             period:'2025 — Present', badge:'Current'        },
+  { degree:'BSc Computing & Information Technology', school:'RIT Dubai',               period:'May 2025',       badge:"4× Dean's List" },
+  { degree:'High School Diploma',                    school:'Abu Dhabi Indian School', period:'March 2021',     badge:''               },
+]
+
+export const PROJECTS = [
+  { name:'Academic Advising Subsystem', desc:'Capstone project: automated academic advisor at university level with AI-driven advising workflows and pipeline automation.',  tags:['Python','Automation','Capstone'], href:'https://github.com/misalmo112/Academic-Advising' },
+  { name:'Family Social App',           desc:'Family-oriented social platform with shared content, messaging, and media features — built for real family connectivity.',      tags:['React','Node.js','App'],          href:'https://github.com/misalmo112/The-Family-App' },
+  { name:'Sports Management App',       desc:'Full sports management system for team coordination, scheduling, and match tracking across multiple sports.',                  tags:['React','Sports','CRUD'],           href:'https://github.com/misalmo112/Sports-Management-app' },
+  { name:'OpenClaw AI Assistant',       desc:'AI-powered assistant with natural language interface and task automation — an exploration in applied AI for productivity.',     tags:['AI','LLM','Automation'],           href:'https://github.com/misalmo112' },
+]
+
+export const SKILLS = [
+  { category:'Network Engineering', items:[
+    { name:'Cisco IOS / NX-OS',       level:90 },
+    { name:'VLAN & L2/L3 Design',     level:88 },
+    { name:'BGP / OSPF Routing',      level:78 },
+    { name:'Meraki Cloud Mgmt',       level:82 },
+    { name:'Wireless Infrastructure', level:75 },
+  ]},
+  { category:'Software & Cloud', items:[
+    { name:'React / Frontend',        level:80 },
+    { name:'Node.js / REST APIs',     level:78 },
+    { name:'Cloud Architecture',      level:72 },
+    { name:'Automation & Scripting',  level:74 },
+  ]},
+  { category:'Security & Operations', items:[
+    { name:'Firewall Configuration',  level:82 },
+    { name:'Access Control Policies', level:85 },
+    { name:'IDS/IPS Management',      level:78 },
+    { name:'Network Monitoring',      level:84 },
+  ]},
+]
+
+export const CERTS = [
+  { name:'CCNA',                           issuer:'Cisco',      status:'Active'      },
+  { name:'Cisco AI Technical Practitioner',issuer:'Cisco',      status:'Active'      },
+  { name:'ITIL 4 Foundation',              issuer:'PeopleCert', status:'Active'      },
+  { name:'CCIE Enterprise',                issuer:'Cisco',       status:'In Progress' },
+]
+
+// Legacy export for any remaining imports
+export const portfolioData = { meta: META, contact: { links: [
+  { label:'Email', href: META.email },
+  { label:'LinkedIn', href: META.linkedin },
+  { label:'GitHub', href: META.github },
+]}}

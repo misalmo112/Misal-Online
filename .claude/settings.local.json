@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:api.anthropic.com)",
-      "Skill(design-html)"
+      "Skill(design-html)",
+      "Bash(/c/Users/misal/.claude/skills/gstack/browse/dist/browse goto *)",
+      "Bash(/c/Users/misal/.claude/skills/gstack/browse/dist/browse screenshot *)",
+      "Bash(mkdir -p /tmp/misal-design2)",
+      "Read(//tmp/**)",
+      "Bash(unzip -o \"C:/Users/misal/Downloads/Misal Online Design System.zip\")",
+      "Bash(python3 *)",
+      "Bash(node *)",
+      "Bash(mkdir *)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(npm run *)",
+      "WebFetch(domain:localhost)"
     ]
   }
 }

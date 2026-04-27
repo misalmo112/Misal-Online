@@ -12,3 +12,9 @@
 {"ts":"2026-04-27T15:50:08.500Z","cmd":"screenshot","args":"C:/Users/misal/AppData/Local/Temp/portfolio-experience.png","origin":"http://localhost:5173/","durationMs":260,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-04-27T15:50:18.238Z","cmd":"js","args":"window.scrollTo(0, 4000)","origin":"http://localhost:5173/","durationMs":4,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-04-27T15:50:20.295Z","cmd":"screenshot","args":"C:/Users/misal/AppData/Local/Temp/portfolio-bottom.png","origin":"http://localhost:5173/","durationMs":291,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-04-27T16:14:54.318Z","cmd":"goto","args":"http://localhost:5174/","origin":"http://localhost:5174/","durationMs":570,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-04-27T16:14:54.971Z","cmd":"screenshot","args":"C:/Users/misal/AppData/Local/Temp/mobile-375.png --viewport 375x812","origin":"http://localhost:5174/","durationMs":1,"status":"error","hasCookies":false,"mode":"launched","error":"path: unsupported mime type \"null\""}
+{"ts":"2026-04-27T16:16:23.658Z","cmd":"goto","args":"http://localhost:5174/","origin":"http://localhost:5174/","durationMs":147,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-04-27T16:16:24.582Z","cmd":"screenshot","args":"C:/Users/misal/AppData/Local/Temp/mobile-375.png","origin":"http://localhost:5174/","durationMs":353,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-04-27T16:17:08.354Z","cmd":"js","args":"document.documentElement.style.maxWidth='375px'; document.documentElement.style.fontSize='14px'","origin":"http://localhost:5174/","durationMs":3,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-04-27T16:17:10.038Z","cmd":"screenshot","args":"C:/Users/misal/AppData/Local/Temp/mobile-check.png","origin":"http://localhost:5174/","durationMs":480,"status":"ok","hasCookies":false,"mode":"launched"}
