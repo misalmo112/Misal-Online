@@ -179,20 +179,108 @@ export const portfolioData = {
     { subnet: '192.168.3.0/24', name: 'OpenClaw AI Assistant', contentKey: 'project-openclaw' },
   ],
 
-  // Projects section (cards)
-  projects: [
-    { id: 'academic', name: 'Academic Advising Subsystem', description: 'Capstone: automated academic advisor subsystem at university.', tags: ['Capstone', 'Automation'] },
-    { id: 'family', name: 'Family App', description: 'Family-oriented application.', tags: ['App'] },
-    { id: 'sports', name: 'Sports Management App', description: 'Sports management application.', tags: ['App', 'Sports'] },
-    { id: 'openclaw', name: 'OpenClaw AI Assistant', description: 'AI assistant project.', tags: ['AI'] },
+  // Experience timeline
+  experience: [
+    {
+      role: 'Network Engineer',
+      company: 'Freelance / Self-Directed',
+      location: 'Abu Dhabi, UAE',
+      period: '2023 – Present',
+      bullets: [
+        'Designed and deployed enterprise-grade switching & routing architectures using Cisco IOS/NX-OS',
+        'Implemented VLAN segmentation, L2/L3 redundancy, and access policies for multi-site environments',
+        'Managed Cisco Meraki cloud-managed networks and wireless deployments',
+        'Produced network documentation, topology diagrams, and runbooks',
+      ],
+    },
+    {
+      role: 'Full-Stack Developer & Founder',
+      company: 'SaaS — Sports Management Platform',
+      location: 'Remote',
+      period: '2023 – Present',
+      bullets: [
+        'Built a SaaS sports management application from scratch — architecture, frontend, backend, database',
+        'Implemented multi-tenant auth, real-time scheduling, and league management features',
+        'Designed REST API, deployed on cloud infrastructure with CI/CD pipeline',
+      ],
+    },
+    {
+      role: 'Student — B.S. Computing & Information Technology',
+      company: 'Rochester Institute of Technology, Dubai',
+      location: 'Dubai, UAE',
+      period: '2021 – May 2025',
+      bullets: [
+        '4× Dean\'s List Certificate for academic excellence',
+        'Selected for RIT Student Abroad Program, Rochester New York campus',
+        'Capstone: Academic Advising Subsystem — automated advising workflows',
+      ],
+    },
   ],
 
-  // Skills section (grouped)
+  // Projects section (cards)
+  projects: [
+    {
+      id: 'sports',
+      name: 'Sports Management SaaS',
+      description: 'Multi-tenant SaaS platform for league and tournament management. Built solo from architecture to deployment.',
+      tags: ['React', 'Node.js', 'SaaS', 'Cloud'],
+      link: 'https://github.com/misalmo112',
+    },
+    {
+      id: 'openclaw',
+      name: 'OpenClaw AI Assistant',
+      description: 'AI-powered assistant integrating multiple LLM providers with tool use, memory, and a custom orchestration layer.',
+      tags: ['AI', 'LLM', 'Python'],
+      link: 'https://github.com/misalmo112',
+    },
+    {
+      id: 'academic',
+      name: 'Academic Advising Subsystem',
+      description: 'Capstone project at RIT Dubai — automated academic advising workflows to reduce advisor load.',
+      tags: ['Capstone', 'Automation', 'React'],
+      link: 'https://github.com/misalmo112',
+    },
+    {
+      id: 'portfolio',
+      name: 'This Portfolio',
+      description: 'Cyberpunk NOC-themed personal portfolio. Clickable topology network, animated sections, dark/light mode.',
+      tags: ['React', 'Framer Motion', 'Vite'],
+      link: 'https://github.com/misalmo112/Misal-Online',
+    },
+  ],
+
+  // Skills section (grouped with proficiency 0–100)
   skills: [
-    { category: 'Networking & Infrastructure', items: ['Cisco IOS/NX-OS', 'VLAN', 'L2/L3', 'BGP', 'OSPF', 'Meraki', 'Wireless', 'Network Design'] },
-    { category: 'Security', items: ['Firewalls', 'IDS/IPS', 'Access Policies', 'Secure Connectivity'] },
-    { category: 'Software Systems', items: ['React', 'Node.js', 'REST APIs', 'Automation', 'Documentation'] },
-    { category: 'Databases/Cloud', items: ['Cisco Cloud', 'Monitoring', 'Config Management'] },
+    {
+      category: 'Networking & Infrastructure',
+      items: [
+        { name: 'Cisco IOS/NX-OS', level: 90 },
+        { name: 'VLAN / L2/L3 Design', level: 88 },
+        { name: 'BGP / OSPF', level: 75 },
+        { name: 'Cisco Meraki', level: 82 },
+        { name: 'Wireless LAN', level: 78 },
+        { name: 'Network Documentation', level: 92 },
+      ],
+    },
+    {
+      category: 'Software & Cloud',
+      items: [
+        { name: 'React / TypeScript', level: 85 },
+        { name: 'Node.js / REST APIs', level: 83 },
+        { name: 'Python / Automation', level: 78 },
+        { name: 'Cloud Infrastructure', level: 72 },
+        { name: 'CI/CD Pipelines', level: 70 },
+      ],
+    },
+    {
+      category: 'Security & Operations',
+      items: [
+        { name: 'Firewalls / IDS/IPS', level: 80 },
+        { name: 'Access Policies / ACLs', level: 85 },
+        { name: 'ITIL Practices', level: 88 },
+        { name: 'Incident Management', level: 80 },
+      ],
+    },
   ],
 
   // Certifications section

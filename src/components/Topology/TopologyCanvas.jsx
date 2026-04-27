@@ -51,24 +51,42 @@ export default function TopologyCanvas({
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid meet"
       className="topology-svg"
+      style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}
       aria-hidden="true"
     >
       <defs>
-        <filter id="glow-subtle" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="0.4" result="blur" />
+        <filter id="glow-subtle" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="0.5" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-        <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="0.8" result="blur" />
+        <filter id="glow-strong" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="1.2" result="blur1" />
+          <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" result="blur2" />
           <feMerge>
-            <feMergeNode in="blur" />
+            <feMergeNode in="blur1" />
+            <feMergeNode in="blur2" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
+        <filter id="glow-core" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="2" result="blur1" />
+          <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" result="blur2" />
+          <feMerge>
+            <feMergeNode in="blur1" />
+            <feMergeNode in="blur2" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <radialGradient id="grid-vignette" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#080808" stopOpacity="0" />
+          <stop offset="100%" stopColor="#080808" stopOpacity="0.7" />
+        </radialGradient>
       </defs>
+      {/* Subtle vignette */}
+      <rect x="0" y="0" width="100" height="100" fill="url(#grid-vignette)" pointerEvents="none" />
       <g className="topology-links">
         {linksToRender.map(([fromId, toId], i) => (
           <Link

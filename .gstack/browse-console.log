@@ -1,0 +1,40 @@
+[2026-04-27T15:49:13.350Z] [debug] [vite] connecting...
+[2026-04-27T15:49:13.369Z] [debug] [vite] connected.
+[2026-04-27T15:49:13.398Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-27T15:49:13.448Z] [error] Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s offsetPath offsetpath 
+    at circle
+    at MotionComponent (http://localhost:5173/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at g
+    at Link (http://localhost:5173/src/components/Topology/Link.jsx:19:32)
+    at g
+    at svg
+    at TopologyCanvas (http://localhost:5173/src/components/Topology/TopologyCanvas.jsx:22:3)
+    at div
+    at MotionComponent (http://localhost:5173/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at section
+    at HeroTopology (http://localhost:5173/src/components/Topology/HeroTopology.jsx:25:3)
+    at main
+    at App (http://localhost:5173/src/App.jsx:44:47)
+[2026-04-27T15:49:13.521Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T15:49:13.522Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T15:49:32.026Z] [debug] [vite] connecting...
+[2026-04-27T15:49:32.032Z] [debug] [vite] connected.
+[2026-04-27T15:49:32.057Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-27T15:49:32.079Z] [error] Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s offsetPath offsetpath 
+    at circle
+    at MotionComponent (http://localhost:5173/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at g
+    at Link (http://localhost:5173/src/components/Topology/Link.jsx:19:32)
+    at g
+    at svg
+    at TopologyCanvas (http://localhost:5173/src/components/Topology/TopologyCanvas.jsx:22:3)
+    at div
+    at MotionComponent (http://localhost:5173/node_modules/.vite/deps/framer-motion.js?v=6f92c15b:943:40)
+    at section
+    at HeroTopology (http://localhost:5173/src/components/Topology/HeroTopology.jsx:25:3)
+    at main
+    at App (http://localhost:5173/src/App.jsx:44:47)
+[2026-04-27T15:49:32.094Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T15:49:32.094Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T15:49:55.164Z] [error] Error: <circle> attribute r: Expected length, "undefined".
+[2026-04-27T15:49:55.164Z] [error] Error: <circle> attribute r: Expected length, "undefined".

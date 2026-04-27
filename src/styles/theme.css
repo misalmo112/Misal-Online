@@ -1,10 +1,12 @@
 /* Cyberpunk NOC — theme variables */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
 :root {
   /* Background */
-  --bg-deep: #0a0e17;
-  --bg-navy: #0d1321;
-  --bg-card: rgba(13, 19, 33, 0.85);
-  --bg-panel: rgba(10, 14, 23, 0.97);
+  --bg-deep: #080808;
+  --bg-navy: #0f0f0f;
+  --bg-card: rgba(15, 15, 15, 0.85);
+  --bg-panel: rgba(8, 8, 8, 0.97);
 
   /* Neon & accents */
   --neon-cyan: #00f5ff;
@@ -15,29 +17,47 @@
   --accent-amber-dim: rgba(255, 176, 32, 0.5);
 
   /* Text */
-  --text-primary: #e8ecf4;
-  --text-secondary: #a0b0c8;
-  --text-muted: #687090;
+  --text-primary: #f0f0f0;
+  --text-secondary: #888;
+  --text-muted: #555;
 
   /* UI */
-  --grid-opacity: 0.06;
-  --border-subtle: rgba(0, 245, 255, 0.15);
-  --glow-cyan: 0 0 12px rgba(0, 245, 255, 0.4);
+  --grid-opacity: 0.04;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --glow-cyan: 0 0 16px rgba(0, 245, 255, 0.45);
   --glow-magenta: 0 0 12px rgba(255, 0, 170, 0.4);
+  --glow-white: 0 0 16px rgba(255, 255, 255, 0.15);
 
   /* Layout */
-  --hero-collapsed-height: 140px;
-  --inspector-width: 360px;
+  --hero-collapsed-height: 64px;
+  --inspector-width: 400px;
   --section-max-width: 1100px;
 
-  /* Typography — larger notes/content */
-  --text-body: 1.125rem;
-  --text-body-lg: 1.25rem;
-  --text-lead: 1.35rem;
-  --text-section-title: 2rem;
-  --text-card-title: 1.35rem;
-  --text-chip: 0.95rem;
+  /* Typography */
+  --font-sans: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --text-body: 1.0625rem;
+  --text-body-lg: 1.2rem;
+  --text-lead: 1.3rem;
+  --text-section-title: 1.875rem;
+  --text-card-title: 1.25rem;
+  --text-chip: 0.875rem;
   --line-height-body: 1.65;
+}
+
+/* Light mode overrides */
+[data-theme="light"] {
+  --bg-deep: #f5f5f5;
+  --bg-navy: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-panel: rgba(245, 245, 245, 0.98);
+  --text-primary: #0a0a0a;
+  --text-secondary: #666;
+  --text-muted: #999;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --glow-cyan: 0 0 16px rgba(0, 200, 210, 0.3);
+  --glow-white: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --grid-opacity: 0.03;
 }
 
 /* Reset & base */
@@ -51,7 +71,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   font-size: var(--text-body);
   background: var(--bg-deep);
   color: var(--text-primary);
@@ -149,24 +169,28 @@ body {
 .hero-topology {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.topology-wrapper {
-  display: block;
 }
 
 .topology-svg {
-  width: 100%;
-  height: 100%;
   display: block;
 }
 
 .node-label {
   pointer-events: none;
+}
+
+/* Nav responsive: hide text links below 640px */
+@media (max-width: 640px) {
+  nav [role="list"] {
+    display: none;
+  }
+}
+
+/* Section responsive padding */
+@media (max-width: 480px) {
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
 }
 
 /* Reduced motion: disable decorative animations */
